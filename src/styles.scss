@@ -20,6 +20,21 @@ body {
 body {
   margin: 0;
   background-color: #f5f5f7;
+  scrollbar-width: thin;
+  scrollbar-color: $primary #f3f3f3;
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f3f3f3;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $primary;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: darken($primary, 10%);
+  }
 }
-
 @import "bootstrap/scss/bootstrap";

@@ -29,5 +29,17 @@ import {
     NgbToastModule,
     NgbTooltipModule,
   ],
+  exports: [
+    NgbAccordionModule,
+    NgbAlertModule,
+    NgbDropdownModule,
+    NgbDatepickerModule,
+    NgbModalModule,
+    NgbNavModule,
+    NgbPopoverModule,
+    NgbTimepickerModule,
+    NgbToastModule,
+    NgbTooltipModule,
+  ],
 })
 export class BootstrapModule {}
