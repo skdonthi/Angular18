@@ -1,5 +1,15 @@
 @import "./app/styles/fonts";
 @import "./app/styles/variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+// merge with existing $theme-colors map
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $primary,
+  )
+);
 :root,
 html,
 body {
