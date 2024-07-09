@@ -1,0 +1,22 @@
+<div class="card shadow">
+  <h6 class="card-header">
+    <ng-container [ngTemplateOutlet]="cardHeader.template"></ng-container>
+    @if (hasActions()) {
+    <div class="float-end">
+      <i class="bi bi-sliders mx-3" (click)="openFiltersModal('')"></i>
+      <i class="bi bi-box-arrow-up-right" (click)="toggleFullscreen()"></i>
+    </div>
+    }
+  </h6>
+  <div class="card-body">
+    @if(cardMainContent.template) {
+    <ng-container [ngTemplateOutlet]="cardMainContent.template"></ng-container>
+    } @else {
+    <div class="d-flex justify-content-center text-primary my-5">
+      <div class="spinner-border mt-5" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    }
+  </div>
+</div>
